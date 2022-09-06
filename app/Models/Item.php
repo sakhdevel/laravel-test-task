@@ -13,4 +13,9 @@ class Item extends Model
     {
         return $this->belongsToMany(Category::class);
     }
+
+    protected $fillable = [
+        'name',
+        'price',
+    ];
 }
