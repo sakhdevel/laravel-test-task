@@ -20,7 +20,7 @@ class DatabaseSeeder extends Seeder
         $categoryPrinters = Category::factory()->create(["name" => "Принтеры"]);
         $categoryOfficeAutomation = Category::factory()->create(["name" => "Оргтехника"]);
         $categoryPens = Category::factory()->create(["name" => "Ручки"]);
-
+        $categoryStationery = Category::factory()->create(["name" => "Канцелярские товары"]);
 
         $itemPen = Item::factory()->create([
             "name" => "Ручка",
@@ -39,5 +39,6 @@ class DatabaseSeeder extends Seeder
         $categoryPrinters->items()->attach($itemPrinter);
         $categoryOfficeAutomation->items()->attach($itemPrinter);
         $categoryPens->items()->attach($itemPen);
+        $categoryStationery->items()->attach($itemPen);
     }
 }
